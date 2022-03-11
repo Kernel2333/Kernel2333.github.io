@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kurumi.one</id>
     <title>くるみ</title>
-    <updated>2022-03-11T07:12:46.878Z</updated>
+    <updated>2022-03-11T07:27:44.535Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kurumi.one"/>
     <link rel="self" href="https://kurumi.one/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2022, くるみ</rights>
     <entry>
         <title type="html"><![CDATA[如何编辑其他用户的注册表]]></title>
-        <id>https://kurumi.one/post/test-1/</id>
-        <link href="https://kurumi.one/post/test-1/">
+        <id>https://kurumi.one/post/01/</id>
+        <link href="https://kurumi.one/post/01/">
         </link>
         <updated>2022-03-11T05:27:56.000Z</updated>
         <content type="html"><![CDATA[<h2 id="加载注册表">加载注册表</h2>
