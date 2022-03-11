@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" >
 
-<title>如何编辑其他用户的注册表 | くるみ</title>
+<title>修改其他用户的注册表 | くるみ</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646984216376">
+<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646986451123">
 <link rel="stylesheet" href="https://kurumi.one/styles/main.css">
 
 
@@ -21,13 +21,8 @@
     <link rel="stylesheet" href="https://kurumi.one/highlight/styles/github-dark.min.css">
     <script src="https://kurumi.one/highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <meta name="description" content="加载注册表
-使用Powershell(管理员模式) 执行：
-Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
-
-然后打开注册表编辑器在 计算机\HKEY_USERS 就能看到刚刚加载的注册表了。
-
-如果提示 ..." />
+    <meta name="description" content="
+写这篇博客的起因是 Windows11 Insider Preview 22567 的一个映射网络驱动器Bug把我主账户给炸了，登录进去就立即绿屏重启，迫不得已启用 Administrator 账号通过修改注册表的方式把映射的驱动器给删了..." />
     <meta name="keywords" content="Windows" />
   </head>
   <body>
@@ -37,7 +32,7 @@ Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://kurumi.one">
-        <img src="https://kurumi.one/images/avatar.png?v=1646984216376" class="site-logo">
+        <img src="https://kurumi.one/images/avatar.png?v=1646986451123" class="site-logo">
         <h1 class="site-title">くるみ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -99,14 +94,17 @@ Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">如何编辑其他用户的注册表</h2>
+            <h2 class="post-title">修改其他用户的注册表</h2>
             <div class="post-date">2022-03-11</div>
             
               <div class="feature-container" style="background-image: url('https://s2.loli.net/2022/03/11/PRdyrkQgnMcNIXz.jpg')">
               </div>
             
             <div class="post-content" v-pre>
-              <h2 id="加载注册表">加载注册表</h2>
+              <blockquote>
+<p>写这篇博客的起因是 <code>Windows11 Insider Preview 22567</code> 的一个映射网络驱动器Bug把我主账户给炸了，登录进去就立即绿屏重启，迫不得已启用 <code>Administrator</code> 账号通过修改注册表的方式把映射的驱动器给删了才恢复正常（微软你Bug写的可真够多的</p>
+</blockquote>
+<h2 id="加载注册表">加载注册表</h2>
 <p>使用Powershell(管理员模式) 执行：</p>
 <pre><code class="language-ps">Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
 </code></pre>

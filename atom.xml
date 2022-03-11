@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kurumi.one</id>
     <title>くるみ</title>
-    <updated>2022-03-11T07:42:46.225Z</updated>
+    <updated>2022-03-11T08:15:07.453Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kurumi.one"/>
     <link rel="self" href="https://kurumi.one/atom.xml"/>
@@ -11,12 +11,15 @@
     <icon>https://kurumi.one/favicon.ico</icon>
     <rights>All rights reserved 2022, くるみ</rights>
     <entry>
-        <title type="html"><![CDATA[如何编辑其他用户的注册表]]></title>
+        <title type="html"><![CDATA[修改其他用户的注册表]]></title>
         <id>https://kurumi.one/post/01/</id>
         <link href="https://kurumi.one/post/01/">
         </link>
         <updated>2022-03-11T05:27:56.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="加载注册表">加载注册表</h2>
+        <content type="html"><![CDATA[<blockquote>
+<p>写这篇博客的起因是 <code>Windows11 Insider Preview 22567</code> 的一个映射网络驱动器Bug把我主账户给炸了，登录进去就立即绿屏重启，迫不得已启用 <code>Administrator</code> 账号通过修改注册表的方式把映射的驱动器给删了才恢复正常（微软你Bug写的可真够多的</p>
+</blockquote>
+<h2 id="加载注册表">加载注册表</h2>
 <p>使用Powershell(管理员模式) 执行：</p>
 <pre><code class="language-ps">Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
 </code></pre>
