@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kurumi.one</id>
-    <title>くるみ</title>
-    <updated>2022-03-11T08:21:15.052Z</updated>
+    <title>くるみ的小站</title>
+    <updated>2022-03-11T08:24:21.284Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kurumi.one"/>
     <link rel="self" href="https://kurumi.one/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://kurumi.one/images/avatar.png</logo>
     <icon>https://kurumi.one/favicon.ico</icon>
-    <rights>All rights reserved 2022, くるみ</rights>
+    <rights>All rights reserved 2022, くるみ的小站</rights>
     <entry>
         <title type="html"><![CDATA[修改其他用户的注册表]]></title>
         <id>https://kurumi.one/post/01/</id>
