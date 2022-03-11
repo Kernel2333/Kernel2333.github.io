@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646980060083">
+<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646982730377">
 <link rel="stylesheet" href="https://kurumi.one/styles/main.css">
 
 
@@ -21,11 +21,13 @@
     <link rel="stylesheet" href="https://kurumi.one/highlight/styles/github-dark.min.css">
     <script src="https://kurumi.one/highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <meta name="description" content="找到目标用户的注册表文件
-直接上代码(管理员模式)
-reg load HKU\Administrator C:\Users\Administrator\ntuser.dat
+    <meta name="description" content="加载注册表
+使用Powershell(管理员模式) 执行：
+Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
 
-..." />
+然后打开注册表编辑器在 计算机\HKEY_USERS 就能看到刚刚加载的注册表了。
+
+如果提示 ..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -35,7 +37,7 @@ reg load HKU\Administrator C:\Users\Administrator\ntuser.dat
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://kurumi.one">
-        <img src="https://kurumi.one/images/avatar.png?v=1646980060083" class="site-logo">
+        <img src="https://kurumi.one/images/avatar.png?v=1646982730377" class="site-logo">
         <h1 class="site-title">くるみ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -101,9 +103,17 @@ reg load HKU\Administrator C:\Users\Administrator\ntuser.dat
             <div class="post-date">2022-03-11</div>
             
             <div class="post-content" v-pre>
-              <h2 id="找到目标用户的注册表文件">找到目标用户的注册表文件</h2>
-<p>直接上代码(管理员模式)</p>
-<pre><code class="language-bash">reg load HKU\Administrator C:\Users\Administrator\ntuser.dat
+              <h2 id="加载注册表">加载注册表</h2>
+<p>使用Powershell(管理员模式) 执行：</p>
+<pre><code class="language-ps">Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
+</code></pre>
+<p>然后打开注册表编辑器在 <code>计算机\HKEY_USERS</code> 就能看到刚刚加载的注册表了。<br>
+<img src="https://kurumi.one/post-images/1646982165504.png" alt="" loading="lazy"><br>
+如果提示 <code>错误: 另一个程序正在使用此文件，进程无法访问。</code>则先把要编辑的用户注销后再加载。</p>
+<h2 id="卸载注册表">卸载注册表</h2>
+<p>同理，将 <code>load</code> 改为 <code>unload</code> 即可<br>
+使用Powershell(管理员模式) 执行：</p>
+<pre><code class="language-ps">Reg unload HKU\用户名
 </code></pre>
 
             </div>
@@ -141,6 +151,11 @@ var app = new Vue({
 
 </script>
 
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
 
 
 
