@@ -758,3 +758,8 @@ a {
   font-size: 16px;
   margin: 4px 8px;
 }
+
+      blockquote{
+border-radius: 10px;
+}
+    
