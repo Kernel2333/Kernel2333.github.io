@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kurumi.one</id>
     <title>くるみ</title>
-    <updated>2022-03-11T05:33:58.642Z</updated>
+    <updated>2022-03-11T06:28:10.918Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kurumi.one"/>
     <link rel="self" href="https://kurumi.one/atom.xml"/>
@@ -11,13 +11,15 @@
     <icon>https://kurumi.one/favicon.ico</icon>
     <rights>All rights reserved 2022, くるみ</rights>
     <entry>
-        <title type="html"><![CDATA[Test 1]]></title>
+        <title type="html"><![CDATA[如何编辑其他用户的注册表]]></title>
         <id>https://kurumi.one/post/test-1/</id>
         <link href="https://kurumi.one/post/test-1/">
         </link>
         <updated>2022-03-11T05:27:56.000Z</updated>
-        <content type="html"><![CDATA[<p>Test Content<br>
-<img src="https://kurumi.one/post-images/1646976525744.jpg" alt="" loading="lazy"></p>
+        <content type="html"><![CDATA[<h2 id="找到目标用户的注册表文件">找到目标用户的注册表文件</h2>
+<p>直接上代码(管理员模式)</p>
+<pre><code class="language-bash">reg load HKU\Administrator C:\Users\Administrator\ntuser.dat
+</code></pre>
 ]]></content>
     </entry>
     <entry>

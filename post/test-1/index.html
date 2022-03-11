@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Test 1 | くるみ</title>
+<title>如何编辑其他用户的注册表 | くるみ</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646976833685">
+<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646980060083">
 <link rel="stylesheet" href="https://kurumi.one/styles/main.css">
 
 
@@ -18,9 +18,14 @@
 
 
 
-    <meta name="description" content="Test Content
+    <link rel="stylesheet" href="https://kurumi.one/highlight/styles/github-dark-min.css">
+    <script src="https://kurumi.one/highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <meta name="description" content="找到目标用户的注册表文件
+直接上代码(管理员模式)
+reg load HKU\Administrator C:\Users\Administrator\ntuser.dat
 
-" />
+..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -30,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://kurumi.one">
-        <img src="https://kurumi.one/images/avatar.png?v=1646976833685" class="site-logo">
+        <img src="https://kurumi.one/images/avatar.png?v=1646980060083" class="site-logo">
         <h1 class="site-title">くるみ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -92,12 +97,14 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Test 1</h2>
+            <h2 class="post-title">如何编辑其他用户的注册表</h2>
             <div class="post-date">2022-03-11</div>
             
             <div class="post-content" v-pre>
-              <p>Test Content<br>
-<img src="https://kurumi.one/post-images/1646976525744.jpg" alt="" loading="lazy"></p>
+              <h2 id="找到目标用户的注册表文件">找到目标用户的注册表文件</h2>
+<p>直接上代码(管理员模式)</p>
+<pre><code class="language-bash">reg load HKU\Administrator C:\Users\Administrator\ntuser.dat
+</code></pre>
 
             </div>
             
@@ -134,11 +141,6 @@ var app = new Vue({
 
 </script>
 
-
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
 
 
 
