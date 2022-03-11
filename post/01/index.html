@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646983660329">
+<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1646983868224">
 <link rel="stylesheet" href="https://kurumi.one/styles/main.css">
 
 
@@ -37,7 +37,7 @@ Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://kurumi.one">
-        <img src="https://kurumi.one/images/avatar.png?v=1646983660329" class="site-logo">
+        <img src="https://kurumi.one/images/avatar.png?v=1646983868224" class="site-logo">
         <h1 class="site-title">くるみ</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -111,7 +111,8 @@ Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
 <img src="https://kurumi.one/post-images/1646982165504.png" alt="" loading="lazy"><br>
 如果提示 <code>错误: 另一个程序正在使用此文件，进程无法访问。</code>则先把要编辑的用户注销后再加载。</p>
 <h2 id="卸载注册表">卸载注册表</h2>
-<p>同理，将 <code>load</code> 改为 <code>unload</code> 即可<br>
+<p>使用这种方式加载的注册表将会在系统重启后自动卸载。<br>
+想手动卸载只需要将 <code>load</code> 改为 <code>unload</code> 即可。<br>
 使用Powershell(管理员模式) 执行：</p>
 <pre><code class="language-ps">Reg unload HKU\用户名
 </code></pre>
