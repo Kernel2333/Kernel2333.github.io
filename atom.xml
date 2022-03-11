@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://kurumi.one</id>
     <title>くるみ</title>
-    <updated>2022-03-11T05:18:59.922Z</updated>
+    <updated>2022-03-11T05:33:58.642Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://kurumi.one"/>
+    <link rel="self" href="https://kurumi.one/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://kurumi.one/images/avatar.png</logo>
+    <icon>https://kurumi.one/favicon.ico</icon>
     <rights>All rights reserved 2022, くるみ</rights>
     <entry>
+        <title type="html"><![CDATA[Test 1]]></title>
+        <id>https://kurumi.one/post/test-1/</id>
+        <link href="https://kurumi.one/post/test-1/">
+        </link>
+        <updated>2022-03-11T05:27:56.000Z</updated>
+        <content type="html"><![CDATA[<p>Test Content<br>
+<img src="https://kurumi.one/post-images/1646976525744.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://localhost:4000/post/hello-gridea/</id>
-        <link href="http://localhost:4000/post/hello-gridea/">
+        <id>https://kurumi.one/post/hello-gridea/</id>
+        <link href="https://kurumi.one/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
