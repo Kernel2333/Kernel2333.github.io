@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kurumi.one</id>
+    <title>くるみ的小站</title>
+    <updated>2022-03-14T06:46:25.603Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kurumi.one"/>
+    <link rel="self" href="https://kurumi.one/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://kurumi.one/images/avatar.png</logo>
+    <icon>https://kurumi.one/favicon.ico</icon>
+    <rights>All rights reserved 2022, くるみ的小站</rights>
+    <entry>
+        <title type="html"><![CDATA[资源管理器不显示网络驱动驱动器]]></title>
+        <id>https://kurumi.one/post/20220314002/</id>
+        <link href="https://kurumi.one/post/20220314002/">
+        </link>
+        <updated>2022-03-14T06:36:03.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><code>Win 11 Build 22572</code> 不显示映射的网络驱动器...<br>
+解决方案很简单，就是映射完之后重启资源管理器，不知道为什么 <code>22572</code> 重启电脑无效，必须要手动重启资源管理器</p>
+</blockquote>
+<h2 id="先看看有没有映射成功">先看看有没有映射成功</h2>
+<p>以管理员权限打开 <code>Powershell</code> 或者 <code>CMD</code> 执行：</p>
+<pre><code class="language-ps">net use
+</code></pre>
+<p>有映射成功的话应该能在这里看到</p>
+<h2 id="taskkill-结束explorer进程">Taskkill 结束Explorer进程</h2>
+<p>以管理员权限打开 <code>Powershell</code> 或者 <code>CMD</code> 执行：</p>
+<pre><code class="language-ps">taskkill /F /IM explorer.exe
+</code></pre>
+<h2 id="启动explorer进程">启动Explorer进程</h2>
+<p>以管理员权限打开 <code>Powershell</code> 或者 <code>CMD</code> 执行：</p>
+<pre><code class="language-ps">start explorer
+</code></pre>
+<p>然后再打开资源管理器应该就能看到映射的网络驱动器了</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用CMD/Powershell映射网络驱动器]]></title>
+        <id>https://kurumi.one/post/20220314001/</id>
+        <link href="https://kurumi.one/post/20220314001/">
+        </link>
+        <updated>2022-03-14T06:17:51.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><code>Win11 Build 22567</code> 映射网络驱动器会导致无限绿屏，升级到 <code>22572</code> 不绿屏了可是映射网络驱动器的选项没了？？微软可真有你的</p>
+</blockquote>
+<h2 id="映射网络驱动器">映射网络驱动器</h2>
+<p>打开 <code>Powershell</code> 或者 <code>CMD</code> 执行：</p>
+<pre><code class="language-ps">net use Z: \\192.168.123.1\Data1 Password /user:Username
+</code></pre>
+<p><code>Z</code>是网络驱动器的盘符。<br>
+<code>192.168.123.1\Data1</code> 是网络驱动器地址。<br>
+<code>Password</code> 是连接密码。<br>
+<code>Username</code> 是用户名。<br>
+把这些参数按照自己的替换掉就行。</p>
+<h2 id="删除网络驱动器">删除网络驱动器</h2>
+<p>删除就比较简单了<br>
+打开 <code>Powershell</code> 或者 <code>CMD</code> 执行：</p>
+<pre><code class="language-ps">net use Z: /del
+</code></pre>
+<p><code>Z</code> 是网络驱动器的盘符。</p>
+<h2 id="映射完资源管理器里找不到怎么办">映射完资源管理器里找不到怎么办</h2>
+<p>参考下这篇文章[资源管理器不显示网络驱动驱动器][https://kurumi.one/post/20220314002]</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[修改其他用户的注册表]]></title>
+        <id>https://kurumi.one/post/01/</id>
+        <link href="https://kurumi.one/post/01/">
+        </link>
+        <updated>2022-03-11T05:27:56.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>写这篇博客的起因是 <code>Windows11 Insider Preview 22567</code> 的一个映射网络驱动器Bug把我主账户给炸了，登录进去就立即绿屏重启，迫不得已启用 <code>Administrator</code> 账号通过修改注册表的方式把映射的驱动器给删了才恢复正常（微软你Bug写的可真够多的</p>
+</blockquote>
+<h2 id="加载注册表">加载注册表</h2>
+<p>使用Powershell(管理员模式) 执行：</p>
+<pre><code class="language-ps">Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
+</code></pre>
+<p>然后打开注册表编辑器在 <code>计算机\HKEY_USERS</code> 就能看到刚刚加载的注册表了。<br>
+<img src="https://kurumi.one/post-images/1646982165504.png" alt="" loading="lazy"><br>
+如果提示 <code>错误: 另一个程序正在使用此文件，进程无法访问。</code>则先把要编辑的用户注销后再加载。</p>
+<h2 id="卸载注册表">卸载注册表</h2>
+<p>使用这种方式加载的注册表将会在系统重启后自动卸载。<br>
+想手动卸载只需要将 <code>load</code> 改为 <code>unload</code> 即可。<br>
+使用Powershell(管理员模式) 执行：</p>
+<pre><code class="language-ps">Reg unload HKU\用户名
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://kurumi.one/post/hello-gridea/</id>
+        <link href="https://kurumi.one/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
