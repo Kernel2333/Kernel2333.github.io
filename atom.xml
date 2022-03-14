@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kurumi.one</id>
     <title>くるみ的小站</title>
-    <updated>2022-03-14T06:46:25.603Z</updated>
+    <updated>2022-03-14T06:52:12.499Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kurumi.one"/>
     <link rel="self" href="https://kurumi.one/atom.xml"/>
@@ -11,13 +11,13 @@
     <icon>https://kurumi.one/favicon.ico</icon>
     <rights>All rights reserved 2022, くるみ的小站</rights>
     <entry>
-        <title type="html"><![CDATA[资源管理器不显示网络驱动驱动器]]></title>
+        <title type="html"><![CDATA[资源管理器里不显示网络驱动驱动器]]></title>
         <id>https://kurumi.one/post/20220314002/</id>
         <link href="https://kurumi.one/post/20220314002/">
         </link>
         <updated>2022-03-14T06:36:03.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
-<p><code>Win 11 Build 22572</code> 不显示映射的网络驱动器...<br>
+<p><code>Win 11 Build 22572</code> 的资源管理器里不显示映射的网络驱动器...<br>
 解决方案很简单，就是映射完之后重启资源管理器，不知道为什么 <code>22572</code> 重启电脑无效，必须要手动重启资源管理器</p>
 </blockquote>
 <h2 id="先看看有没有映射成功">先看看有没有映射成功</h2>
@@ -61,7 +61,8 @@
 </code></pre>
 <p><code>Z</code> 是网络驱动器的盘符。</p>
 <h2 id="映射完资源管理器里找不到怎么办">映射完资源管理器里找不到怎么办</h2>
-<p>参考下这篇文章[资源管理器不显示网络驱动驱动器][https://kurumi.one/post/20220314002]</p>
+<p>参考下这篇文章<br>
+<a href="https://kurumi.one/post/20220314002">资源管理器不显示网络驱动驱动器</a></p>
 ]]></content>
     </entry>
     <entry>
