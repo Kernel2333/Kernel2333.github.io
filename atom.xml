@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://kurumi.one</id>
+    <id>https://blog.kurumi.one</id>
     <title>くるみ的小站</title>
-    <updated>2022-03-14T06:52:12.499Z</updated>
+    <updated>2022-04-19T09:26:19.507Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://kurumi.one"/>
-    <link rel="self" href="https://kurumi.one/atom.xml"/>
+    <link rel="alternate" href="https://blog.kurumi.one"/>
+    <link rel="self" href="https://blog.kurumi.one/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://kurumi.one/images/avatar.png</logo>
-    <icon>https://kurumi.one/favicon.ico</icon>
+    <logo>https://blog.kurumi.one/images/avatar.png</logo>
+    <icon>https://blog.kurumi.one/favicon.ico</icon>
     <rights>All rights reserved 2022, くるみ的小站</rights>
     <entry>
         <title type="html"><![CDATA[资源管理器里不显示网络驱动驱动器]]></title>
-        <id>https://kurumi.one/post/20220314002/</id>
-        <link href="https://kurumi.one/post/20220314002/">
+        <id>https://blog.kurumi.one/post/20220314002/</id>
+        <link href="https://blog.kurumi.one/post/20220314002/">
         </link>
         <updated>2022-03-14T06:36:03.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -38,8 +38,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[使用CMD/Powershell映射网络驱动器]]></title>
-        <id>https://kurumi.one/post/20220314001/</id>
-        <link href="https://kurumi.one/post/20220314001/">
+        <id>https://blog.kurumi.one/post/20220314001/</id>
+        <link href="https://blog.kurumi.one/post/20220314001/">
         </link>
         <updated>2022-03-14T06:17:51.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -67,8 +67,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[修改其他用户的注册表]]></title>
-        <id>https://kurumi.one/post/01/</id>
-        <link href="https://kurumi.one/post/01/">
+        <id>https://blog.kurumi.one/post/01/</id>
+        <link href="https://blog.kurumi.one/post/01/">
         </link>
         <updated>2022-03-11T05:27:56.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -79,7 +79,7 @@
 <pre><code class="language-ps">Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
 </code></pre>
 <p>然后打开注册表编辑器在 <code>计算机\HKEY_USERS</code> 就能看到刚刚加载的注册表了。<br>
-<img src="https://kurumi.one/post-images/1646982165504.png" alt="" loading="lazy"><br>
+<img src="https://blog.kurumi.one/post-images/1646982165504.png" alt="" loading="lazy"><br>
 如果提示 <code>错误: 另一个程序正在使用此文件，进程无法访问。</code>则先把要编辑的用户注销后再加载。</p>
 <h2 id="卸载注册表">卸载注册表</h2>
 <p>使用这种方式加载的注册表将会在系统重启后自动卸载。<br>
@@ -91,8 +91,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://kurumi.one/post/hello-gridea/</id>
-        <link href="https://kurumi.one/post/hello-gridea/">
+        <id>https://blog.kurumi.one/post/hello-gridea/</id>
+        <link href="https://blog.kurumi.one/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>

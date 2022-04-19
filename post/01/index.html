@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://kurumi.one/favicon.ico?v=1647240722500">
-<link rel="stylesheet" href="https://kurumi.one/styles/main.css">
+<link rel="shortcut icon" href="https://blog.kurumi.one/favicon.ico?v=1650360288294">
+<link rel="stylesheet" href="https://blog.kurumi.one/styles/main.css">
 
 
 
@@ -18,8 +18,8 @@
 
 
 
-    <link rel="stylesheet" href="https://kurumi.one/highlight/styles/github-dark.min.css">
-    <script src="https://kurumi.one/highlight/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://blog.kurumi.one/highlight/styles/github-dark.min.css">
+    <script src="https://blog.kurumi.one/highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <meta name="description" content="
 写这篇博客的起因是 Windows11 Insider Preview 22567 的一个映射网络驱动器Bug把我主账户给炸了，登录进去就立即绿屏重启，迫不得已启用 Administrator 账号通过修改注册表的方式把映射的驱动器给删了..." />
@@ -31,8 +31,8 @@
       <div class="sidebar" :class="{ 'full-height': menuVisible }">
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
-      <a class="site-title-container" href="https://kurumi.one">
-        <img src="https://kurumi.one/images/avatar.png?v=1647240722500" class="site-logo">
+      <a class="site-title-container" href="https://blog.kurumi.one">
+        <img src="https://blog.kurumi.one/images/avatar.png?v=1650360288294" class="site-logo">
         <h1 class="site-title">くるみ的小站</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -85,7 +85,7 @@
       温故而知新
     </div>
     <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://kurumi.one/atom.xml" target="_blank">RSS</a>
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://blog.kurumi.one/atom.xml" target="_blank">RSS</a>
     </div>
   </div>
 </div>
@@ -109,7 +109,7 @@
 <pre><code class="language-ps">Reg load HKU\用户名 C:\Users\用户名\NTUSER.DAT
 </code></pre>
 <p>然后打开注册表编辑器在 <code>计算机\HKEY_USERS</code> 就能看到刚刚加载的注册表了。<br>
-<img src="https://kurumi.one/post-images/1646982165504.png" alt="" loading="lazy"><br>
+<img src="https://blog.kurumi.one/post-images/1646982165504.png" alt="" loading="lazy"><br>
 如果提示 <code>错误: 另一个程序正在使用此文件，进程无法访问。</code>则先把要编辑的用户注销后再加载。</p>
 <h2 id="卸载注册表">卸载注册表</h2>
 <p>使用这种方式加载的注册表将会在系统重启后自动卸载。<br>
@@ -122,7 +122,7 @@
             
               <div class="tag-container">
                 
-                  <a href="https://kurumi.one/tag/FE1GRcYSF/" class="tag">
+                  <a href="https://blog.kurumi.one/tag/FE1GRcYSF/" class="tag">
                     Windows
                   </a>
                 
@@ -131,7 +131,7 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://kurumi.one/post/hello-gridea/">
+                <a href="https://blog.kurumi.one/post/hello-gridea/">
                   <h3 class="post-title">
                     Hello Gridea
                   </h3>
